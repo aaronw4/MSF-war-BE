@@ -1,0 +1,24 @@
+{
+  "name": "msf-war-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronw4/MSF-war-BE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronw4/MSF-war-BE/issues"
+  },
+  "homepage": "https://github.com/aaronw4/MSF-war-BE#readme",
+  "dependencies": {
+    "knex": "^0.95.14",
+    "sqlite3": "^4.2.0"
+  }
+}
