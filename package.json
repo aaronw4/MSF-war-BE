@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/aaronw4/MSF-war-BE#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "knex": "^0.95.14",
     "sqlite3": "^4.2.0"
   }
