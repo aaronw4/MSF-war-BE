@@ -10,35 +10,35 @@ exports.up = function(knex) {
         .createTable('teams', table => {
             table.increments();
             table.string('name');
-            tasks.integer('character1')
+            table.integer('character1')
                 .unsigned()
                 .notNullable()
                 .references('id')
                 .inTable('characters')
                 .onUpdate('CASCADE')
                 .onDelete('RESTRICT');
-            tasks.integer('character2')
+            table.integer('character2')
                 .unsigned()
                 .notNullable()
                 .references('id')
                 .inTable('characters')
                 .onUpdate('CASCADE')
                 .onDelete('RESTRICT');
-            tasks.integer('character3')
+            table.integer('character3')
                 .unsigned()
                 .notNullable()
                 .references('id')
                 .inTable('characters')
                 .onUpdate('CASCADE')
                 .onDelete('RESTRICT');
-            tasks.integer('character4')
+            table.integer('character4')
                 .unsigned()
                 .notNullable()
                 .references('id')
                 .inTable('characters')
                 .onUpdate('CASCADE')
                 .onDelete('RESTRICT');
-            tasks.integer('character5')
+            table.integer('character5')
                 .unsigned()
                 .notNullable()
                 .references('id')
