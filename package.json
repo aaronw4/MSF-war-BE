@@ -20,6 +20,7 @@
   "homepage": "https://github.com/aaronw4/MSF-war-BE#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "knex": "^0.95.14",
     "nodemon": "^2.0.15",
     "sqlite3": "github:mapbox/node-sqlite3"
