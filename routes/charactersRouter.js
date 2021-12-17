@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
   
 router.post('/', (req, res) => {
-    const { name, image } = req.body;
+    const { name, image, power } = req.body;
     const newCharacter = { name, image };
    
     characters.add(newCharacter)
@@ -32,6 +32,30 @@ router.post('/', (req, res) => {
             })
             console.log(err)
         })
+});
+
+router.put('/:id', (req, res) => {
+  const {id} = req.params;
+  const changes = req.body;
+
+  characters.findById(id)
+    .then(info => {
+      if (info.length != 0) {
+        characters.update(changes, id)
+          .then(update => {
+            res.status(204).json(update)
+          })
+      } else {
+        res.status(404).json({
+          error: 'There is not character with that id.'
+        })
+      }
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: 'Failed to update character.'
+      })
+    })
 });
 
 router.delete('/:id', (req, res) => {
