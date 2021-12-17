@@ -5,7 +5,8 @@ exports.up = function(knex) {
         .createTable('characters', table => {
             table.increments();
             table.string('name');
-            table.string('image')
+            table.string('image');
+            table.integer('power');
         })      
         .createTable('teams', table => {
             table.increments();
